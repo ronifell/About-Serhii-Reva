@@ -521,3 +521,34 @@ button:hover ~ .custom-cursor {
   transform: translate(-50%, -50%) scale(1.1);
 }
 
+/* Horizontal Work Experience Layout */
+.experience-section {
+  min-height: 100vh;
+  padding: 4rem 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.work-experience-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.work-items-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 2rem 0;
+  will-change: transform;
+  position: relative;
+}
+
+.work-item {
+  flex-shrink: 0;
+  width: 700px;
+  max-width: 90vw;
+  aspect-ratio: 3 / 2;
+  position: relative;
+}
+
