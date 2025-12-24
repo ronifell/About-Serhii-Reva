@@ -15,7 +15,7 @@
             </svg>
           </div>
           <div class="flex-1">
-            <h3 class="text-2xl font-bold text-white mb-2">Bachelor's degree in Computer Science</h3>
+            <h3 class="text-2xl font-bold text-white mb-2">Master's degree in Computer Science</h3>
             <p class="text-xl text-blue-400 font-semibold mb-2">Ukrainian National Technical University "Igor Sikorsky Kyiv Institute of Technology"</p>
             <p class="text-gray-400 text-lg">2017 – 2021</p>
           </div>

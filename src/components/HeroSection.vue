@@ -79,11 +79,43 @@
           <div class="star star-70 star-large star-green"></div>
           <div class="star star-71 star-small star-blue"></div>
           <div class="star star-72 star-medium star-purple"></div>
+          <div class="star star-73 star-small star-green"></div>
+          <div class="star star-74 star-medium star-blue"></div>
+          <div class="star star-75 star-large star-purple"></div>
+          <div class="star star-76 star-small star-green"></div>
+          <div class="star star-77 star-medium star-blue"></div>
+          <div class="star star-78 star-small star-purple"></div>
+          <div class="star star-79 star-large star-green"></div>
+          <div class="star star-80 star-small star-blue"></div>
+          <div class="star star-81 star-medium star-purple"></div>
+          <div class="star star-82 star-small star-green"></div>
+          <div class="star star-83 star-medium star-blue"></div>
+          <div class="star star-84 star-large star-purple"></div>
+          <div class="star star-85 star-small star-green"></div>
+          <div class="star star-86 star-medium star-blue"></div>
+          <div class="star star-87 star-small star-purple"></div>
+          <div class="star star-88 star-large star-green"></div>
+          <div class="star star-89 star-small star-blue"></div>
+          <div class="star star-90 star-medium star-purple"></div>
+          <div class="star star-91 star-small star-green"></div>
+          <div class="star star-92 star-medium star-blue"></div>
+          <div class="star star-93 star-large star-purple"></div>
+          <div class="star star-94 star-small star-green"></div>
+          <div class="star star-95 star-medium star-blue"></div>
+          <div class="star star-96 star-small star-purple"></div>
+          <div class="star star-97 star-large star-green"></div>
+          <div class="star star-98 star-small star-blue"></div>
+          <div class="star star-99 star-medium star-purple"></div>
+          <div class="star star-100 star-small star-green"></div>
+          <div class="star star-101 star-large star-blue"></div>
+          <div class="star star-102 star-medium star-purple"></div>
           
           <img 
-            src="/Serhii Reva.png" 
+            :src="isHovered ? '/smile.png' : '/Serhii Reva.png'"
             alt="Serhii Reva" 
-            class="relative w-80 h-80 mx-auto rounded-full object-cover shadow-2xl ring-4 ring-gray-800 transform hover:scale-105 transition-transform duration-300 z-10"
+            class="relative w-80 h-80 mx-auto rounded-full object-cover shadow-2xl ring-4 ring-gray-800 transition-all duration-300 z-10"
+            @mouseenter="isHovered = true"
+            @mouseleave="isHovered = false"
           />
         </div>
       </div>
@@ -124,4 +156,10 @@
     </div>
   </section>
 </template>
+
+<script setup>
+import { ref } from 'vue'
+
+const isHovered = ref(false)
+</script>
 
