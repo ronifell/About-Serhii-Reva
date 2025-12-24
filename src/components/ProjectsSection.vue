@@ -97,7 +97,7 @@ const projects = ref([
   },
   {
     title: 'SlimPathAI',
-    url: 'https://sllimpathai.com/',
+    url: 'https://slimpathai.com/',
     skills: ['Next.js', 'TailWind CSS', 'Supabase', 'HTML', 'stripe', 'PayPal', 'PWA', 'ios', 'Android'],
     description: 'Your Personal Al-Powered Weight Loss Journey. Transform your habits with personalized guidance, daily micro-actions, and intelligent coaching tailored to your unique metabolic profile.'
   }
