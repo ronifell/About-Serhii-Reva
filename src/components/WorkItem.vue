@@ -1,10 +1,8 @@
 <template>
   <div 
-    class="work-item card p-5 md:p-6 relative overflow-hidden group flex-shrink-0"
-    :style="backgroundStyle"
+    class="work-item card relative overflow-visible group flex-shrink-0 rotating-border-light"
   >
-    <div class="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-blue-600 to-purple-600"></div>
-    <div class="pl-6 h-full flex flex-col justify-end">
+    <div class="rotating-border-inner h-full flex flex-col justify-end p-5 md:p-6" :style="backgroundStyle">
       <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
         <div>
           <h3 class="text-2xl font-bold text-white mb-1">{{ work.title }}</h3>
@@ -38,7 +36,7 @@ const props = defineProps({
 const backgroundStyle = computed(() => {
   const imageNumber = props.index + 1
   return {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/work_${imageNumber}.png')`,
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/work_${imageNumber}.png')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat'

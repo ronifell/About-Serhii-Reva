@@ -552,3 +552,52 @@ button:hover ~ .custom-cursor {
   position: relative;
 }
 
+/* Rotating light border animation */
+.rotating-border-light {
+  border-radius: 0.75rem;
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+  background: transparent;
+}
+
+.rotating-border-light::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 0.75rem;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 240deg,
+    rgba(96, 165, 250, 0.5) 250deg,
+    rgba(139, 92, 246, 0.8) 260deg,
+    rgba(96, 165, 250, 1) 270deg,
+    rgba(139, 92, 246, 1) 280deg,
+    rgba(96, 165, 250, 1) 290deg,
+    rgba(139, 92, 246, 0.8) 300deg,
+    rgba(96, 165, 250, 0.5) 310deg,
+    transparent 320deg,
+    transparent 360deg
+  );
+  animation: rotate-border 3s linear infinite;
+  z-index: 0;
+  opacity: 1;
+}
+
+.rotating-border-inner {
+  position: relative;
+  border-radius: 0.75rem;
+  z-index: 1;
+  overflow: hidden;
+}
+
+@keyframes rotate-border {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
