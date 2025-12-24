@@ -5,10 +5,85 @@
       <div class="order-2 lg:order-1 animate-fade-in-up">
         <div class="relative inline-block">
           <div class="absolute -inset-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full opacity-20 blur-2xl animate-float"></div>
+          
+          <!-- Twinkling Stars -->
+          <div class="star star-1 star-small star-blue"></div>
+          <div class="star star-2 star-medium star-purple"></div>
+          <div class="star star-3 star-large star-blue"></div>
+          <div class="star star-4 star-small star-green"></div>
+          <div class="star star-5 star-medium star-purple"></div>
+          <div class="star star-6 star-small star-blue"></div>
+          <div class="star star-7 star-large star-purple"></div>
+          <div class="star star-8 star-medium star-blue"></div>
+          <div class="star star-9 star-small star-green"></div>
+          <div class="star star-10 star-medium star-purple"></div>
+          <div class="star star-11 star-small star-blue"></div>
+          <div class="star star-12 star-large star-green"></div>
+          <div class="star star-13 star-small star-purple"></div>
+          <div class="star star-14 star-medium star-blue"></div>
+          <div class="star star-15 star-small star-green"></div>
+          <div class="star star-16 star-medium star-purple"></div>
+          <div class="star star-17 star-small star-blue"></div>
+          <div class="star star-18 star-large star-purple"></div>
+          <div class="star star-19 star-small star-green"></div>
+          <div class="star star-20 star-medium star-blue"></div>
+          <div class="star star-21 star-small star-purple"></div>
+          <div class="star star-22 star-medium star-green"></div>
+          <div class="star star-23 star-small star-blue"></div>
+          <div class="star star-24 star-large star-purple"></div>
+          <div class="star star-25 star-small star-green"></div>
+          <div class="star star-26 star-medium star-blue"></div>
+          <div class="star star-27 star-small star-purple"></div>
+          <div class="star star-28 star-large star-green"></div>
+          <div class="star star-29 star-small star-blue"></div>
+          <div class="star star-30 star-medium star-purple"></div>
+          <div class="star star-31 star-small star-green"></div>
+          <div class="star star-32 star-medium star-blue"></div>
+          <div class="star star-33 star-small star-purple"></div>
+          <div class="star star-34 star-large star-green"></div>
+          <div class="star star-35 star-small star-blue"></div>
+          <div class="star star-36 star-medium star-purple"></div>
+          <div class="star star-37 star-small star-green"></div>
+          <div class="star star-38 star-medium star-blue"></div>
+          <div class="star star-39 star-small star-purple"></div>
+          <div class="star star-40 star-large star-green"></div>
+          <div class="star star-41 star-small star-blue"></div>
+          <div class="star star-42 star-medium star-purple"></div>
+          <div class="star star-43 star-small star-green"></div>
+          <div class="star star-44 star-medium star-blue"></div>
+          <div class="star star-45 star-small star-purple"></div>
+          <div class="star star-46 star-large star-green"></div>
+          <div class="star star-47 star-small star-blue"></div>
+          <div class="star star-48 star-medium star-purple"></div>
+          <div class="star star-49 star-small star-green"></div>
+          <div class="star star-50 star-medium star-blue"></div>
+          <div class="star star-51 star-small star-purple"></div>
+          <div class="star star-52 star-large star-green"></div>
+          <div class="star star-53 star-small star-blue"></div>
+          <div class="star star-54 star-medium star-purple"></div>
+          <div class="star star-55 star-small star-green"></div>
+          <div class="star star-56 star-medium star-blue"></div>
+          <div class="star star-57 star-small star-purple"></div>
+          <div class="star star-58 star-large star-green"></div>
+          <div class="star star-59 star-small star-blue"></div>
+          <div class="star star-60 star-medium star-purple"></div>
+          <div class="star star-61 star-small star-green"></div>
+          <div class="star star-62 star-medium star-blue"></div>
+          <div class="star star-63 star-small star-purple"></div>
+          <div class="star star-64 star-large star-green"></div>
+          <div class="star star-65 star-small star-blue"></div>
+          <div class="star star-66 star-medium star-purple"></div>
+          <div class="star star-67 star-small star-green"></div>
+          <div class="star star-68 star-medium star-blue"></div>
+          <div class="star star-69 star-small star-purple"></div>
+          <div class="star star-70 star-large star-green"></div>
+          <div class="star star-71 star-small star-blue"></div>
+          <div class="star star-72 star-medium star-purple"></div>
+          
           <img 
             src="/Serhii Reva.png" 
             alt="Serhii Reva" 
-            class="relative w-80 h-80 mx-auto rounded-full object-cover shadow-2xl ring-4 ring-gray-800 transform hover:scale-105 transition-transform duration-300"
+            class="relative w-80 h-80 mx-auto rounded-full object-cover shadow-2xl ring-4 ring-gray-800 transform hover:scale-105 transition-transform duration-300 z-10"
           />
         </div>
       </div>

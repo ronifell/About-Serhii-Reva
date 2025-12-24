@@ -89,3 +89,402 @@
   transform: translateY(-8px) scale(1.02);
 }
 
+/* Twinkling Stars Animation */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.4;
+    filter: brightness(0.8);
+  }
+  50% {
+    opacity: 1;
+    filter: brightness(1.5);
+  }
+}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  animation: twinkle 2s ease-in-out infinite;
+  z-index: 5;
+}
+
+/* Size variations */
+.star-small {
+  width: 4px;
+  height: 4px;
+}
+
+.star-medium {
+  width: 6px;
+  height: 6px;
+}
+
+.star-large {
+  width: 8px;
+  height: 8px;
+}
+
+/* Color variations */
+.star-blue {
+  background: linear-gradient(45deg, #60a5fa, #3b82f6, #2563eb);
+  box-shadow: 0 0 8px rgba(96, 165, 250, 0.9), 0 0 16px rgba(59, 130, 246, 0.6);
+}
+
+.star-purple {
+  background: linear-gradient(45deg, #a78bfa, #8b5cf6, #7c3aed);
+  box-shadow: 0 0 8px rgba(167, 139, 250, 0.9), 0 0 16px rgba(139, 92, 246, 0.6);
+}
+
+.star-green {
+  background: linear-gradient(45deg, #34d399, #10b981, #059669);
+  box-shadow: 0 0 8px rgba(52, 211, 153, 0.9), 0 0 16px rgba(16, 185, 129, 0.6);
+}
+
+.star::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 2px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.star-small::before {
+  width: 8px;
+}
+
+.star-medium::before {
+  width: 12px;
+}
+
+.star-large::before {
+  width: 16px;
+}
+
+.star-blue::before {
+  background: linear-gradient(90deg, transparent, #60a5fa, transparent);
+}
+
+.star-purple::before {
+  background: linear-gradient(90deg, transparent, #a78bfa, transparent);
+}
+
+.star-green::before {
+  background: linear-gradient(90deg, transparent, #34d399, transparent);
+}
+
+.star::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.star-small::after {
+  height: 8px;
+}
+
+.star-medium::after {
+  height: 12px;
+}
+
+.star-large::after {
+  height: 16px;
+}
+
+.star-blue::after {
+  background: linear-gradient(0deg, transparent, #60a5fa, transparent);
+}
+
+.star-purple::after {
+  background: linear-gradient(0deg, transparent, #a78bfa, transparent);
+}
+
+.star-green::after {
+  background: linear-gradient(0deg, transparent, #34d399, transparent);
+}
+
+/* Star positions around the circular photo (positioned relative to 320px photo) */
+.star-1 {
+  top: 0%;
+  left: calc(50% - 4px);
+  animation-delay: 0s;
+}
+
+.star-2 {
+  top: 8%;
+  right: 20%;
+  animation-delay: 0.25s;
+}
+
+.star-3 {
+  top: 15%;
+  right: 0%;
+  animation-delay: 0.5s;
+}
+
+.star-4 {
+  top: 25%;
+  right: 8%;
+  animation-delay: 0.75s;
+}
+
+.star-5 {
+  top: 35%;
+  right: -3%;
+  animation-delay: 1s;
+}
+
+.star-6 {
+  top: calc(50% - 4px);
+  right: -5%;
+  animation-delay: 1.25s;
+}
+
+.star-7 {
+  bottom: 35%;
+  right: -3%;
+  animation-delay: 1.5s;
+}
+
+.star-8 {
+  bottom: 25%;
+  right: 8%;
+  animation-delay: 1.75s;
+}
+
+.star-9 {
+  bottom: 15%;
+  right: 0%;
+  animation-delay: 0.1s;
+}
+
+.star-10 {
+  bottom: 8%;
+  right: 20%;
+  animation-delay: 0.35s;
+}
+
+.star-11 {
+  bottom: 0%;
+  left: calc(50% - 4px);
+  animation-delay: 0.6s;
+}
+
+.star-12 {
+  bottom: 8%;
+  left: 20%;
+  animation-delay: 0.85s;
+}
+
+.star-13 {
+  bottom: 15%;
+  left: 0%;
+  animation-delay: 1.1s;
+}
+
+.star-14 {
+  bottom: 25%;
+  left: 8%;
+  animation-delay: 1.35s;
+}
+
+.star-15 {
+  bottom: 35%;
+  left: -3%;
+  animation-delay: 1.6s;
+}
+
+.star-16 {
+  top: calc(50% - 4px);
+  left: -5%;
+  animation-delay: 1.85s;
+}
+
+.star-17 {
+  top: 35%;
+  left: -3%;
+  animation-delay: 0.15s;
+}
+
+.star-18 {
+  top: 25%;
+  left: 8%;
+  animation-delay: 0.4s;
+}
+
+.star-19 {
+  top: 15%;
+  left: 0%;
+  animation-delay: 0.65s;
+}
+
+.star-20 {
+  top: 8%;
+  left: 20%;
+  animation-delay: 0.9s;
+}
+
+.star-21 {
+  top: 5%;
+  left: 35%;
+  animation-delay: 1.15s;
+}
+
+.star-22 {
+  top: 5%;
+  right: 35%;
+  animation-delay: 1.4s;
+}
+
+.star-23 {
+  bottom: 5%;
+  right: 35%;
+  animation-delay: 1.65s;
+}
+
+.star-24 {
+  bottom: 5%;
+  left: 35%;
+  animation-delay: 1.9s;
+}
+
+/* Additional stars 25-72 positioned around the circle */
+.star-25 { top: 12%; right: 30%; animation-delay: 0.2s; }
+.star-26 { top: 18%; right: 15%; animation-delay: 0.4s; }
+.star-27 { top: 30%; right: 5%; animation-delay: 0.6s; }
+.star-28 { top: 42%; right: 2%; animation-delay: 0.8s; }
+.star-29 { top: 58%; right: 2%; animation-delay: 1.0s; }
+.star-30 { top: 70%; right: 5%; animation-delay: 1.2s; }
+.star-31 { bottom: 18%; right: 15%; animation-delay: 1.4s; }
+.star-32 { bottom: 12%; right: 30%; animation-delay: 1.6s; }
+.star-33 { bottom: 12%; left: 30%; animation-delay: 1.8s; }
+.star-34 { bottom: 18%; left: 15%; animation-delay: 0.1s; }
+.star-35 { top: 70%; left: 5%; animation-delay: 0.3s; }
+.star-36 { top: 58%; left: 2%; animation-delay: 0.5s; }
+.star-37 { top: 42%; left: 2%; animation-delay: 0.7s; }
+.star-38 { top: 30%; left: 5%; animation-delay: 0.9s; }
+.star-39 { top: 18%; left: 15%; animation-delay: 1.1s; }
+.star-40 { top: 12%; left: 30%; animation-delay: 1.3s; }
+.star-41 { top: 3%; left: 45%; animation-delay: 1.5s; }
+.star-42 { top: 3%; right: 45%; animation-delay: 1.7s; }
+.star-43 { bottom: 3%; right: 45%; animation-delay: 1.9s; }
+.star-44 { bottom: 3%; left: 45%; animation-delay: 0.12s; }
+.star-45 { top: 22%; right: 25%; animation-delay: 0.32s; }
+.star-46 { top: 28%; right: 12%; animation-delay: 0.52s; }
+.star-47 { top: 38%; right: 4%; animation-delay: 0.72s; }
+.star-48 { top: 46%; right: 0%; animation-delay: 0.92s; }
+.star-49 { top: 54%; right: 0%; animation-delay: 1.12s; }
+.star-50 { top: 62%; right: 4%; animation-delay: 1.32s; }
+.star-51 { top: 72%; right: 12%; animation-delay: 1.52s; }
+.star-52 { bottom: 22%; right: 25%; animation-delay: 1.72s; }
+.star-53 { bottom: 22%; left: 25%; animation-delay: 1.92s; }
+.star-54 { top: 72%; left: 12%; animation-delay: 0.14s; }
+.star-55 { top: 62%; left: 4%; animation-delay: 0.34s; }
+.star-56 { top: 54%; left: 0%; animation-delay: 0.54s; }
+.star-57 { top: 46%; left: 0%; animation-delay: 0.74s; }
+.star-58 { top: 38%; left: 4%; animation-delay: 0.94s; }
+.star-59 { top: 28%; left: 12%; animation-delay: 1.14s; }
+.star-60 { top: 26%; right: 28%; animation-delay: 1.34s; }
+.star-61 { top: 10%; left: 40%; animation-delay: 1.54s; }
+.star-62 { top: 10%; right: 40%; animation-delay: 1.74s; }
+.star-63 { bottom: 10%; right: 40%; animation-delay: 1.94s; }
+.star-64 { bottom: 10%; left: 40%; animation-delay: 0.16s; }
+.star-65 { top: 32%; right: 18%; animation-delay: 0.36s; }
+.star-66 { top: 45%; right: 6%; animation-delay: 0.56s; }
+.star-67 { top: 55%; right: 6%; animation-delay: 0.76s; }
+.star-68 { top: 68%; right: 18%; animation-delay: 0.96s; }
+.star-69 { bottom: 32%; right: 18%; animation-delay: 1.16s; }
+.star-70 { bottom: 32%; left: 18%; animation-delay: 1.36s; }
+.star-71 { bottom: 68%; left: 18%; animation-delay: 1.56s; }
+.star-72 { top: 26%; left: 28%; animation-delay: 1.76s; }
+
+/* Sparkling Background Animation */
+.sparkle-background {
+  overflow: hidden;
+  z-index: 0;
+}
+
+.sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: sparkle 3s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0) translateY(0);
+    filter: brightness(0.5);
+  }
+  10% {
+    opacity: 1;
+    transform: scale(1) translateY(-10px);
+    filter: brightness(1.5);
+  }
+  20% {
+    opacity: 0.8;
+    transform: scale(1.2) translateY(-15px);
+    filter: brightness(2);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1) translateY(-20px);
+    filter: brightness(1.8);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(0.8) translateY(-25px);
+    filter: brightness(1.2);
+  }
+  70% {
+    opacity: 0.4;
+    transform: scale(0.6) translateY(-30px);
+    filter: brightness(0.8);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0) translateY(-40px);
+    filter: brightness(0.3);
+  }
+}
+
+/* Color variations for sparkles */
+.sparkle:nth-child(3n) {
+  background: radial-gradient(circle, #60a5fa, #3b82f6);
+  box-shadow: 0 0 6px rgba(96, 165, 250, 0.8), 0 0 12px rgba(59, 130, 246, 0.6);
+}
+
+.sparkle:nth-child(3n+1) {
+  background: radial-gradient(circle, #a78bfa, #8b5cf6);
+  box-shadow: 0 0 6px rgba(167, 139, 250, 0.8), 0 0 12px rgba(139, 92, 246, 0.6);
+}
+
+.sparkle:nth-child(3n+2) {
+  background: radial-gradient(circle, #ffffff, #e5e7eb);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.9), 0 0 12px rgba(255, 255, 255, 0.5);
+}
+
+/* Size variations */
+.sparkle:nth-child(5n) {
+  width: 3px;
+  height: 3px;
+}
+
+.sparkle:nth-child(7n) {
+  width: 5px;
+  height: 5px;
+}
+
+.sparkle:nth-child(11n) {
+  width: 2px;
+  height: 2px;
+}
+
