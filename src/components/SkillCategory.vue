@@ -1,25 +1,38 @@
 <template>
-  <div class="card p-6 hover:scale-105 transition-transform duration-300" :style="style">
-    <div class="text-4xl mb-4">{{ icon }}</div>
-    <h3 class="text-2xl font-bold mb-4 text-white">{{ title }}</h3>
-    <div class="flex flex-wrap">
-      <span 
-        v-for="skill in skills" 
-        :key="skill"
-        class="skill-tag"
-      >
-        {{ skill }}
-      </span>
+  <div 
+    class="card p-6 hover:scale-105 transition-transform duration-300 relative overflow-hidden min-h-[400px] flex flex-col" 
+    :style="computedStyle"
+  >
+    <div v-if="backgroundImage" class="absolute inset-0 opacity-70 z-0">
+      <img :src="backgroundImage" :alt="title" class="w-full h-full object-cover" />
+    </div>
+    <div class="relative z-10 mt-auto">
+      <div class="flex flex-wrap">
+        <span 
+          v-for="skill in skills" 
+          :key="skill"
+          class="skill-tag"
+        >
+          {{ skill }}
+        </span>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-defineProps({
+import { computed } from 'vue'
+
+const props = defineProps({
   title: String,
   skills: Array,
   icon: String,
-  style: Object
+  style: Object,
+  backgroundImage: String
+})
+
+const computedStyle = computed(() => {
+  return props.style || {}
 })
 </script>
 

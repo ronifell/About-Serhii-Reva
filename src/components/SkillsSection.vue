@@ -11,29 +11,29 @@
       <SkillCategory 
         title="Front-End"
         :skills="frontEndSkills"
-        icon="🎨"
         class="animate-slide-in-left"
+        background-image="/frontend.png"
       />
       <SkillCategory 
         title="Back-End"
         :skills="backEndSkills"
-        icon="⚙️"
         class="animate-slide-in-left"
         :style="{ animationDelay: '0.1s' }"
+        background-image="/backend.png"
       />
       <SkillCategory 
         title="Databases"
         :skills="databaseSkills"
-        icon="💾"
         class="animate-slide-in-right"
         :style="{ animationDelay: '0.2s' }"
+        background-image="/Databases.png"
       />
       <SkillCategory 
         title="Cloud & DevOps"
         :skills="devOpsSkills"
-        icon="☁️"
         class="animate-slide-in-right"
         :style="{ animationDelay: '0.3s' }"
+        background-image="/Cloud & Devops.png"
       />
     </div>
   </section>
