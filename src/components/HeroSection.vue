@@ -8,7 +8,7 @@
           <img 
             src="/Serhii Reva.png" 
             alt="Serhii Reva" 
-            class="relative w-80 h-80 mx-auto rounded-full object-cover shadow-2xl ring-4 ring-white transform hover:scale-105 transition-transform duration-300"
+            class="relative w-80 h-80 mx-auto rounded-full object-cover shadow-2xl ring-4 ring-gray-800 transform hover:scale-105 transition-transform duration-300"
           />
         </div>
       </div>
@@ -18,16 +18,16 @@
         <div>
           <h1 class="text-5xl md:text-6xl font-bold mb-4">
             <span class="gradient-text">Hello,</span><br>
-            <span class="text-gray-900">I'm Serhii Reva</span>
+            <span class="text-white">I'm Serhii Reva</span>
           </h1>
-          <p class="text-xl md:text-2xl text-gray-600 font-semibold">
+          <p class="text-xl md:text-2xl text-gray-300 font-semibold">
             Full-Stack Developer & AI Developer
           </p>
         </div>
         
-        <div class="space-y-4 text-gray-700 leading-relaxed">
+        <div class="space-y-4 text-gray-300 leading-relaxed">
           <p class="text-lg">
-            I am a Full-Stack Developer from Ukraine with <span class="font-semibold text-blue-600">8+ years</span> of hands-on experience building scalable, high-performance web and mobile applications. My expertise covers both front-end and back-end development, delivering complete solutions from concept to deployment.
+            I am a Full-Stack Developer from Ukraine with <span class="font-semibold text-blue-400">8+ years</span> of hands-on experience building scalable, high-performance web and mobile applications. My expertise covers both front-end and back-end development, delivering complete solutions from concept to deployment.
           </p>
           <p class="text-lg">
             I'm passionate about clean code, modern technologies, and creating products that provide real value to users.

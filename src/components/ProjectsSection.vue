@@ -2,7 +2,7 @@
   <section id="projects" class="section-container">
     <div class="text-center mb-16 animate-fade-in-up">
       <h2 class="text-4xl md:text-5xl font-bold mb-4 gradient-text">Portfolio Projects</h2>
-      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+      <p class="text-xl text-gray-400 max-w-2xl mx-auto">
         A collection of websites and applications I've contributed to
       </p>
     </div>
