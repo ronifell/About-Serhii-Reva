@@ -1,5 +1,17 @@
 <template>
   <div class="min-h-screen relative">
+    <!-- Custom Cursor -->
+    <div 
+      v-if="cursorVisible"
+      class="custom-cursor"
+      :style="{
+        left: `${cursorX}px`,
+        top: `${cursorY}px`
+      }"
+    >
+      <img src="/Serhii Reva.png" alt="Cursor" class="cursor-image" />
+    </div>
+    
     <!-- Sparkling Background -->
     <div class="sparkle-background fixed inset-0 pointer-events-none z-0">
       <div 
@@ -42,7 +54,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import NavBar from './components/NavBar.vue'
 import HeroSection from './components/HeroSection.vue'
 import SkillsSection from './components/SkillsSection.vue'
@@ -54,6 +66,24 @@ import Footer from './components/Footer.vue'
 // Generate sparkle data once
 const sparkles = ref([])
 
+// Custom cursor state
+const cursorX = ref(0)
+const cursorY = ref(0)
+const cursorVisible = ref(true)
+
+const updateCursor = (e) => {
+  cursorX.value = e.clientX
+  cursorY.value = e.clientY
+}
+
+const showCursor = () => {
+  cursorVisible.value = true
+}
+
+const hideCursor = () => {
+  cursorVisible.value = false
+}
+
 onMounted(() => {
   // Generate 50 sparkles with random positions and timings
   sparkles.value = Array.from({ length: 50 }, (_, i) => ({
@@ -63,6 +93,22 @@ onMounted(() => {
     delay: Math.random() * 3,
     duration: 2 + Math.random() * 2
   }))
+  
+  // Hide default cursor
+  document.body.style.cursor = 'none'
+  
+  // Track mouse movement on entire document
+  document.addEventListener('mousemove', updateCursor)
+  document.addEventListener('mouseenter', showCursor)
+  document.addEventListener('mouseleave', hideCursor)
+})
+
+onUnmounted(() => {
+  // Restore default cursor
+  document.body.style.cursor = 'auto'
+  document.removeEventListener('mousemove', updateCursor)
+  document.removeEventListener('mouseenter', showCursor)
+  document.removeEventListener('mouseleave', hideCursor)
 })
 </script>
 
