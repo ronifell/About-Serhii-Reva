@@ -4,7 +4,13 @@
     :style="computedStyle"
   >
     <div v-if="backgroundImage" class="absolute inset-0 opacity-70 z-0">
-      <img :src="backgroundImage" :alt="title" class="w-full h-full object-cover" />
+      <img 
+        :src="backgroundImage" 
+        :alt="title" 
+        class="w-full h-full object-cover" 
+        loading="lazy"
+        decoding="async"
+      />
     </div>
     <div class="relative z-10 mt-auto">
       <div class="flex flex-wrap">

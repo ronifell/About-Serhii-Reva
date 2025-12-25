@@ -2,7 +2,11 @@
   <div 
     class="work-item card relative overflow-visible group flex-shrink-0 rotating-border-light"
   >
-    <div class="rotating-border-inner h-full flex flex-col justify-end p-5 md:p-6" :style="backgroundStyle">
+    <div 
+      ref="backgroundElement"
+      class="rotating-border-inner h-full flex flex-col justify-end p-5 md:p-6" 
+      :style="computedBackgroundStyle"
+    >
       <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
         <div>
           <h3 class="text-2xl font-bold text-white mb-1">{{ work.title }}</h3>
@@ -26,17 +30,67 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, ref, onMounted } from 'vue'
 
 const props = defineProps({
   work: Object,
   index: Number
 })
 
-const backgroundStyle = computed(() => {
-  const imageNumber = props.index + 1
+const backgroundElement = ref(null)
+const imageLoaded = ref(false)
+const imageNumber = computed(() => props.index + 1)
+const imageUrl = computed(() => `/work_${imageNumber.value}.png`)
+
+// Load image when element is near viewport
+onMounted(() => {
+  if (!backgroundElement.value) return
+
+  // For first 3 images, load immediately (they're likely visible)
+  if (props.index < 3) {
+    const img = new Image()
+    img.onload = () => {
+      imageLoaded.value = true
+    }
+    img.src = imageUrl.value
+    return
+  }
+
+  // For other images, use Intersection Observer
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !imageLoaded.value) {
+          const img = new Image()
+          img.onload = () => {
+            imageLoaded.value = true
+          }
+          img.src = imageUrl.value
+          observer.disconnect()
+        }
+      })
+    },
+    {
+      rootMargin: '100px', // Start loading 100px before entering viewport
+      threshold: 0.01
+    }
+  )
+
+  observer.observe(backgroundElement.value)
+})
+
+const computedBackgroundStyle = computed(() => {
+  if (!imageLoaded.value) {
+    return {
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      backgroundColor: '#1f2937' // Fallback color while loading
+    }
+  }
+  
   return {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/work_${imageNumber}.png')`,
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('${imageUrl.value}')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat'

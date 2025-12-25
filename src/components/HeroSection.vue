@@ -114,6 +114,10 @@
             :src="isHovered ? '/smile.png' : '/Serhii Reva.png'"
             alt="Serhii Reva" 
             class="relative w-80 h-80 mx-auto rounded-full object-cover shadow-2xl ring-4 ring-gray-800 transition-all duration-300 z-10"
+            loading="eager"
+            fetchpriority="high"
+            width="320"
+            height="320"
             @mouseenter="isHovered = true"
             @mouseleave="isHovered = false"
           />
@@ -158,8 +162,14 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 
 const isHovered = ref(false)
+
+// Preload hover image for instant switching
+onMounted(() => {
+  const hoverImg = new Image()
+  hoverImg.src = '/smile.png'
+})
 </script>
 

@@ -14,6 +14,7 @@
         :alt="project.title + ' homepage screenshot'"
         class="absolute inset-0 w-full h-full object-cover"
         loading="lazy"
+        decoding="async"
         @error="handleScreenshotError"
       />
       <!-- Use iframe for sites that allow embedding -->

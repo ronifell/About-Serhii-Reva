@@ -9,7 +9,15 @@
         top: `${cursorY}px`
       }"
     >
-      <img src="/Serhii Reva.png" alt="Cursor" class="cursor-image" />
+      <img 
+        src="/Serhii Reva.png" 
+        alt="Cursor" 
+        class="cursor-image" 
+        loading="eager"
+        fetchpriority="high"
+        width="32"
+        height="32"
+      />
     </div>
     
     <!-- Sparkling Background -->
